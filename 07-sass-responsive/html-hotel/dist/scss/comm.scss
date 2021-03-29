@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@import "reset", "main", "contents", "variables", "mixins";
+
+// width 1599px 이상일 경우
+// layout
+.wrap {
+    padding-left: 200px;
+}
+header {
+    position: fixed; top: 0; left: 0;bottom: 0;
+    width: 200px;
+    background:red;
+}
+.nav-util {
+    height: 50px; 
+    background: $b;
+}
+#main {
+    height: calc(100vh - 50px);
+    background: #eee;
+    article {
+        float: left;
+        width: 20%; height: 25%;
+        background: rgba($blue, 1);
+    }
+}
