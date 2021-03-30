@@ -1,0 +1,19 @@
+#header {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#header .logo {
+  margin-bottom: 0;
+}
+
+#header #collapsibleNavbar.show {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: tomato;
+}
+/*# sourceMappingURL=comm.css.map */

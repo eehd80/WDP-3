@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+#header {
+    justify-content: space-between;
+    .logo {
+        margin-bottom: 0;
+    }
+    #collapsibleNavbar.show {
+        position: fixed;top: 56px;left: 0;right: 0;
+        height: 100vh;
+        background: tomato;
+    }
+}
