@@ -75,17 +75,39 @@ $width : 20%; $height: 25%;
     background: #eee;
     // &.container {}
     article {
+        position: relative;
         float: left;
         width: $width; height: $height;
+        padding: 20px;
+        &::before {
+            content: '';
+            position: absolute;top: 0;left: 0;right: 0;bottom: 0;
+            background: $b;
+            opacity: 0.05;
+        }
         &:first-child {
             width: $width * 3; height: $height * 2;
-            background: rgba($gray-9, 1);
+            background: url(../../images/photo-1.jpg) 0 0 no-repeat;
+            background-size: cover;
         }
         &:nth-child(2) {
             width: $width * 2; height: $height;
             background: rgba($gray-9, .9);
         }
-        &:nth-child(3) {background: rgba($gray-9, .8);}
+        &:nth-child(3) {
+            position: relative;
+            background: rgba($gray-9, .8);
+            i {
+                position: absolute;bottom: -3vw;right: -3vw;
+                font-size: 16vw; color: $w;
+                animation: ani-sync 2s infinite forwards;
+                opacity: .5;
+            }
+            @keyframes ani-sync {
+                0% {transform: rotate(0deg);}
+                100% {transform: rotate(359deg);}
+            }
+        }
         &:nth-child(4) {background: rgba($gray-9, .7);}
         &:nth-child(5) {background: rgba($gray-9, .6);}
         &:nth-child(6) {
