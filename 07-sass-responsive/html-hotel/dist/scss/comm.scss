@@ -7,18 +7,50 @@
     padding-left: 300px;
 }
 header {
+    display: flex; flex-direction: column;
     position: fixed; top: 0; left: 0;bottom: 0;
     width: 300px; padding: 40px 0;
     text-align: center;
+    .logo {
+        margin-bottom: 40px;
+    }
+    .nav-goto {
+        margin: auto 0 0;
+        .link-goto {
+            display: flex; justify-content: center;
+            li:first-child a::before {
+                    display: none;
+            }
+            a {
+                position: relative;
+                display: block;
+                padding: 5px 20px;
+                &::before {
+                    position: absolute;top: 8px;left: 0;
+                    display: block;
+                    content: '';
+                    width: 3px; height: 20px;
+                    background: red;
+                }
+            }
+        }
+
+    }
 }
 #gnb li {
-    a::before {
-        display: inline-block;
-        margin-top: -5px;
-        font-family: 'Line Awesome Free';
-        font-weight: 900;
-        font-size: 2em; 
-        vertical-align: middle;
+    text-align: left;
+    a {
+        display: block;
+        padding: 5px 60px;
+        &::before {
+            display: inline-block;
+            margin-top: -5px;
+            margin-right: 5px;
+            font-family: 'Line Awesome Free';
+            font-weight: 900;
+            font-size: 2em; 
+            vertical-align: middle;
+        }
     }
     &:first-child a::before {content: "\f578";}
     &:nth-child(2) a::before {content: "\f6be";}
