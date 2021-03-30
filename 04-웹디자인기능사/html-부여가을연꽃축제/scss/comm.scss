@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+$pink : #E84E83;
+$bgGray : #eee;
+$borderGray : #999;
+
+* {
+    margin: 0;padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #222328;
+    box-sizing: border-box;
+    list-style: none; text-decoration: none;
+}
+
+// comm
+.blind {
+    text-indent: -9999px;
+    font-size: 0;line-height: 0;
+}
+.tit- {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #999;
+
+    span {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 5px;
+        font-size: 20px;
+
+        &::after {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            background: $pink;
+        }
+    }
+}
+.link-more {
+    position: absolute;top: 2px;right: 0;
+    color: #333;
+    font-size: 14px;
+    &::after {
+        content: "\f067";
+        margin-left: 3px;
+        font-family: 'Line Awesome Free';
+        font-weight: 900;
+    }
+}
+
+.wrap {
+    position: relative;
+    width: 100%; max-width: 1600px;
+    padding-left: 200px;
+}
+header {
+    position: fixed;top: 0;left: 0;
+    width: 200px; height: 100vh;
+    background: #eee;
+    border-right: 1px solid #eee;
+    h1 {
+        padding: 20px 0;
+    }
+    h1 a {
+        display: block;
+        height: 100px;
+        background: url(../images/logo.png) 12px 50% no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+    }
+}
+
+.nav-d1 {
+    border-bottom: 1px solid #ccc;
+    > li {
+        &.on {
+            > a {
+                background: $pink;
+                color: #fff;
+                i {
+                    color: #fff;
+                }
+                &::after {
+                    color: #fff
+                }
+            }
+            .nav-d2 {
+                max-height: 176px;
+            }
+        }
+        >a {
+            position: relative;
+            display: block;
+            padding: 20px 0 15px 15px;
+            // color: #fff;
+            background: #fff;
+            border-top: 1px solid #ccc;
+
+            &::after {
+                content: "\f105";
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                font-family: 'Line Awesome Free';
+                font-weight: 900;
+                color: #999;
+            }
+        }
+    }
+    i {
+        margin: -4px 5px 0 0;
+        font-size: 26px;
+        vertical-align: middle;
+    }
+}
+.nav-d2 {
+    overflow: hidden;
+    max-height: 0;
+    background: rgb(249, 249, 249);
+    transition: max-height .5s;
+    border-left: 3px solid $pink;
+    a {
+        display: block; position: relative;
+        padding: 12px 0 11px 47px;
+        font-size: 14px;
+        &::after {
+            position: absolute;top: 20px;left: 30px;
+            content: '';
+            width: 3px;height: 3px;
+            background: $borderGray;
+        }
+        &:hover {
+            background: #ddd;
+        }
+    }
+}
+
+
+.slide {
+    img {
+        width: 100%;
+    }
+}
+.container {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    padding: 30px 0 0 30px;
+    
+    .sec- {
+        position: relative;
+        width: 48%; margin-bottom: 40px;
+    }
+    
+}
+
+.sec-bbs {
+    li {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            background: #ecf0f2;
+        }
+    }
+    a {
+        display: block;
+        padding: 2px 0 2px 15px;
+        // font-size: 14px;
+        color: #333;
+        
+    }
+    .time {
+        float: right;
+        font-size: 12px;
+        font-family: verdana;
+        color: #999;
+    }
+}
+
+.sec-gallery {
+    .tit- {
+        margin-bottom: 0;
+    }
+    .cont {
+        position: relative;
+        overflow: hidden;
+        height: 229px;
+    }
+    .lst-gallery {
+        position: absolute;top: 0;left: 0;
+        display: flex;
+        width: 200%;
+        li {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.container .sec-goto {
+    width: calc(100% + 30px);
+    margin-left: -30px;
+    background: #EFEFEF url(../images/bg-wrap.jpg) 0 -57px no-repeat;
+    background-size: 100% auto;
+    .lst-goto {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%; height: 130px;
+        margin: auto; 
+        a {
+            flex-grow: 1;
+            color: #444;
+        }
+        i {
+            display: block;
+            margin: 0 auto 10px;
+            font-size: 40px;color: #444;
+            text-align: center;
+        }
+    }
+}
+
+
+footer {
+    display: flex; flex-wrap: wrap; 
+    justify-content: space-between; align-items: center;
+    padding: 20px 0 40px;
+    .foot-policies {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 30px; padding-bottom: 20px;
+        border-bottom: 1px solid $bgGray;
+        text-align: center;
+        a {
+            // display: block;
+            position: relative;
+            padding: 0 17px;
+            &::after {
+                content: '';
+                position: absolute;top: 3px;right: 0;
+                width: 1px;height: 15px;
+                background: $borderGray;
+            }
+            &:last-child::after {
+                display: none;
+            }
+        }
+    }
+
+    .foot-info {
+        padding-left: 30px;
+    }
+    .foot-tit {
+        font-size: 22px;
+    }
+
+    address {
+        margin: 10px 0;
+        font-size: 14px; font-style: normal;
+    }
+
+    .foot-sns {
+        padding-right: 30px;
+        a {
+            float: left;
+            padding: 0 5px;
+        }
+        i {
+            font-size: 30px;
+        }
+    }
+
+}
