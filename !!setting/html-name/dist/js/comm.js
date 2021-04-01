@@ -37,6 +37,9 @@ $(function(){
         scrollText: '페이지 위로', // Text for element, can contain HTML
     });
 
+    // wow.js
+    new WOW().init();
+
     // 오브젝스 애니메이션
     // 윈도우를 스크롤 했을 때
     // .ani-slide를 각각 잡아서...
