@@ -30,7 +30,29 @@ $(function(){
                 scrollTop : $(hash).offset().top - 56
             }, 1000)
         }
+    })
 
+    // srollup
+    $.scrollUp({
+        scrollText: '페이지 위로', // Text for element, can contain HTML
+    });
+
+    // 오브젝스 애니메이션
+    // 윈도우를 스크롤 했을 때
+    // .ani-slide를 각각 잡아서...
+    // 만약 스크롤 값보다 .ani-slide 위치값이 크다면...
+    // (.ani-slide가 화면 안으로 들어왔을 때...)
+    // ani-top 클래스 추가
+    $(window).scroll(function(){
+        $('.ani-slide').each(function(){
+
+            let winscroll = $(window).scrollTop(),
+                pos = $(this).offset().top
+
+            if( winscroll + 700 > pos ){
+                $(this).addClass('ani-top')
+            }
+        })
     })
 
 

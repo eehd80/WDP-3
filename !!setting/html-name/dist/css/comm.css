@@ -265,4 +265,72 @@ footer {
   padding: 100px 0;
   background: #ccc;
 }
+
+#scrollUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: 100px;
+  padding: 10px 20px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #555;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0;
+}
+
+#scrollUp::before {
+  display: block;
+  content: "\f106";
+  font-family: 'Line Awesome Free';
+  font-weight: 900;
+  font-size: 45px;
+  color: #fff;
+}
+
+.ani-slide {
+  visibility: hidden;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+}
+
+.ani-slide.ani-top {
+  visibility: visible;
+  -webkit-animation: object-slide 1s forwards;
+          animation: object-slide 1s forwards;
+}
+
+@-webkit-keyframes object-slide {
+  0% {
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes object-slide {
+  0% {
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=comm.css.map */

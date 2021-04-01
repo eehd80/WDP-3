@@ -66,3 +66,30 @@ footer {
     padding: 100px 0;
     background: #ccc;
 }
+
+#scrollUp {
+    display: flex; justify-content: center; align-items: center;
+    width: 100px; height: 100px;padding: 10px 20px;
+    bottom: 20px;right: 20px;
+    background-color: #555; border-radius: 50%;
+    color: #fff;font-size: 0;
+    &::before {
+        display: block;
+        content: "\f106";
+        font-family: 'Line Awesome Free'; font-weight: 900; font-size: 45px; color: $w;
+    }
+}
+
+// ani-slide
+.ani-slide {
+    visibility: hidden;
+    transform: translateY(60px);
+    &.ani-top {
+        visibility: visible;
+        animation: object-slide 1s forwards;
+    }
+    @keyframes object-slide {
+        0% {transform: translateY(60px); opacity: 0;}
+        100% {transform: translateY(0);opacity: 1;}
+    }
+}
