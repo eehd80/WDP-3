@@ -254,7 +254,7 @@ input[type=password] {
   background: #eee;
 }
 
-.carousel img {
+.swiper-container img {
   width: 100%;
   height: 100vh;
   -o-object-fit: cover;
