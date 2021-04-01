@@ -54,10 +54,18 @@
     background: #eee;
 }
 
-.swiper-container {
+.slide-top {
     img {
         width: 100%; height: 100vh;
         object-fit: cover;
+    }
+}
+
+.slide-sns {
+    .swiper-slide {
+        display: flex;align-items: center; justify-content: center;
+        height: 300px;
+        background: $w;
     }
 }
 

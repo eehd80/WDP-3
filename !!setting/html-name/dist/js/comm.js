@@ -7,13 +7,15 @@ $(function(){
     // 스크롤 값이 50보다 작을 경우
     // #header에 붙어있던 sticky 클래스를 삭제
 
-    $(window).scroll(function(){
+    $(window)
+    .scroll(function(){
         if($(this).scrollTop() > 50){
             $('#header').addClass('sticky')
         }else{
             $('#header').removeClass('sticky')
         }
     })
+    .trigger('scroll')
 
     // 메뉴 클릭시 해당 해시태그로 애니메이션 되면서 이동
     // #collapsibleNavbar .nav-link를 클릭했을 때
@@ -59,7 +61,8 @@ $(function(){
     })
 
     // slide-top
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.slide-top', {
+        loop: true,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -71,6 +74,20 @@ $(function(){
         pagination: {
         el: '.swiper-pagination',
         clickable: true,
+        },
+      });
+
+    //   slide-sns
+    var swiper = new Swiper('.slide-sns', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
       });
 
