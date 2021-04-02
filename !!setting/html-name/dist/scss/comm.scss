@@ -55,15 +55,22 @@
     background: #eee;
 }
 
+/* css로 컴파일 되는 주석 */ 
+// css로 컴파일 되지 않는 주석
 .slide-top {
     .swiper-slide {
         position: relative;
     }
+    .swiper-slide-active {
+        .slide-txt {
+            transform: translate(-50%, -50%); opacity: 1;
+        }
+    }
     .slide-txt {
         position: absolute;top: 50%;left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 30%); opacity: 0;transition: all .5s;
         width: 100%;
-         color: $w;
+         color: $w; text-shadow: 0 0 3px rgba($b, .7);
         // text-align: center;
     }
     @media screen and (min-width: 576px) {
