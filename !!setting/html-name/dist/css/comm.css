@@ -269,25 +269,34 @@ input[type=password] {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
-  font-size: 3rem;
   color: #fff;
+}
+
+@media screen and (min-width: 576px) {
+  .slide-top .slide-txt {
+    max-width: 540px;
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .slide-top .slide-txt {
     max-width: 720px;
+    font-size: 2rem;
   }
 }
 
 @media screen and (min-width: 992px) {
   .slide-top .slide-txt {
     max-width: 960px;
+    font-size: 2.5rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .slide-top .slide-txt {
     max-width: 1140px;
+    font-size: 3rem;
   }
 }
 
