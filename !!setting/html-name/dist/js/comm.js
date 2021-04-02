@@ -79,6 +79,8 @@ $(function(){
 
     //   slide-sns
     var swiper = new Swiper('.slide-sns', {
+        centeredSlides: true,
+        loop: true,
         slidesPerView: 3,
         spaceBetween: 30,
         pagination: {

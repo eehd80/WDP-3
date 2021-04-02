@@ -245,6 +245,10 @@ input[type=password] {
   color: purple;
 }
 
+.sec-g {
+  overflow: hidden;
+}
+
 .sec-g .container {
   padding: 100px 0;
   text-align: center;
@@ -261,6 +265,10 @@ input[type=password] {
      object-fit: cover;
 }
 
+.slide-sns {
+  overflow: visible;
+}
+
 .slide-sns .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,6 +281,18 @@ input[type=password] {
           justify-content: center;
   height: 300px;
   background: #fff;
+}
+
+.slide-sns .swiper-button-next {
+  right: -70px;
+}
+
+.slide-sns .swiper-button-prev {
+  left: -70px;
+}
+
+.slide-sns .swiper-pagination-bullets {
+  bottom: -40px;
 }
 
 footer {
