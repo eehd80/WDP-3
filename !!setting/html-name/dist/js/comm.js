@@ -94,7 +94,7 @@ $(function(){
       });
 
     //   swiper mall
-    var swiper = new Swiper('.slide-mall', {
+    var swiper = new Swiper('.slide-mall .swiper-container', {
         loop: true,
         slidesPerView: 4,
         spaceBetween: 30,

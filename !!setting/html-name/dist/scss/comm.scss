@@ -81,11 +81,17 @@
     }
 }
 .slide-mall {
-
+    position: relative;
     .swiper-slide {
         display: flex;align-items: center; justify-content: center;
         height: 300px;
         background: $w;
+    }
+    .swiper-button-next {
+        right: -60px;
+    }
+    .swiper-button-prev {
+        left: -60px;
     }
 }
 
