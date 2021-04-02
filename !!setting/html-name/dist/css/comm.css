@@ -258,6 +258,39 @@ input[type=password] {
   background: #eee;
 }
 
+.slide-top .swiper-slide {
+  position: relative;
+}
+
+.slide-top .slide-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 3rem;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .slide-top .slide-txt {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .slide-top .slide-txt {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .slide-top .slide-txt {
+    max-width: 1140px;
+  }
+}
+
 .slide-top img {
   width: 100%;
   height: 100vh;
@@ -314,12 +347,39 @@ input[type=password] {
   background: #fff;
 }
 
-.slide-mall .swiper-button-next {
+.slide-mall .swiper-button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.slide-mall .swiper-button::after {
+  display: none;
+}
+
+.slide-mall .swiper-button::before {
+  display: block;
+  font-family: 'Line Awesome Free';
+  font-weight: 900;
+  font-size: 3em;
+  color: red;
+}
+
+.slide-mall .swiper-button-next-out {
   right: -60px;
 }
 
-.slide-mall .swiper-button-prev {
+.slide-mall .swiper-button-next-out::before {
+  content: "\f061";
+}
+
+.slide-mall .swiper-button-prev-out {
   left: -60px;
+}
+
+.slide-mall .swiper-button-prev-out::before {
+  content: "\f060";
 }
 
 footer {

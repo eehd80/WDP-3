@@ -62,6 +62,7 @@ $(function(){
 
     // slide-top
     var swiper = new Swiper('.slide-top', {
+        effect: 'fade',
         loop: true,
         navigation: {
           nextEl: '.swiper-button-next',
@@ -99,8 +100,8 @@ $(function(){
         slidesPerView: 4,
         spaceBetween: 30,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next-out',
+            prevEl: '.swiper-button-prev-out',
         },
       });
 
