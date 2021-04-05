@@ -1,5 +1,22 @@
 $(function(){
 
+    // nav
+    let $gnb = $('#gnb'),
+        $header = $('#header')
+
+    $gnb
+    .removeClass('active') // 초기화
+    .on('mouseenter focusin', function(){
+        $(this).addClass('active')
+        $header.addClass('sticky')
+    })
+    .on('mouseleave focusout', function(){
+        $(this).removeClass('active')
+        if($(window).scrollTop() < 50){
+            $header.removeClass('sticky')
+        }
+    })
+
     // header sticky
     // window를 스크롤 했을 때
     // 만약 스크롤 값이 50보다 커질 경우
@@ -82,7 +99,7 @@ $(function(){
     var swiper = new Swiper('.slide-sns', {
         centeredSlides: true,
         loop: true,
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 30,
         pagination: {
           el: '.swiper-pagination',
@@ -92,6 +109,22 @@ $(function(){
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+              centeredSlides: false,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+              centeredSlides: false,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
+          }
       });
 
     //   swiper mall
